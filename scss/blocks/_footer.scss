@@ -1,0 +1,189 @@
+.footer {
+  padding-top: 140px;
+
+  &__body {
+    padding: 50px 60px;
+    background-color: var(--color-black);
+    border-radius: 45px 45px 0 0;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 20px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    color: var(--color-white);
+    column-gap: 160px;
+    align-items: center;
+    @include mobile {
+      display: contents; // Замість "display: flex" можна застосувати display: contents
+      order: 0;
+    }
+    @include desktop {
+      column-gap: 70px;
+    }
+  }
+
+  &__title-logo {
+    display: flex;
+    justify-content: center;
+    img {
+      color: var(--color-white);
+    }
+  }
+
+  &__title-abouts {
+    display: flex;
+    gap: 40px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 40px;
+    }
+  }
+
+  &__title-abouts-link {
+    position: relative;
+    display: flex;
+    @include mobile {
+      order: -1;
+    }
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      background-color: var(--color-white);
+      width: 0%;
+      height: 2px;
+      transition-duration: inherit;
+    }
+  }
+
+  &__title-socials {
+    display: flex;
+    gap: 20px;
+    @include mobile {
+      justify-content: center;
+      order: 1;
+    }
+    @include mobile {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title-social-img {
+  }
+
+  &__contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      order: 0;
+    }
+  }
+
+  &__contact-us-about {
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__contact-us-about-title {
+    width: 130px;
+    background-color: var(--color-green);
+    padding-inline: 10px;
+    border-radius: var(--border-radius-small);
+  }
+
+  &__contact-us-about-email {
+    padding-top: 30px;
+    color: var(--color-white);
+    padding-bottom: 20px;
+  }
+
+  &__contact-us-about-phone {
+    color: var(--color-white);
+    padding-bottom: 20px;
+  }
+
+  &__contact-us-about-addres {
+    color: var(--color-white);
+    padding-bottom: 20px;
+  }
+
+  &__contact-us-email-send {
+    padding-bottom: 50px;
+  }
+
+  &__contact-us-form {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 30px;
+      width: 100%;
+    }
+    display: flex;
+    gap: 20px;
+    padding: 60px 40px;
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius);
+  }
+
+  &__contact-us-form-email {
+    border-radius: var(--border-radius);
+    background-color: inherit;
+    border: 1px solid var(--color-white);
+    width: 260px;
+    padding: 22px 35px;
+  }
+
+  &__contact-us-form-button {
+    background-color: var(--color-green);
+    color: var(--color-black);
+  }
+
+  &__policy {
+    border-top: 1px solid var(--color-white);
+    padding-top: 50px;
+    color: var(--color-white);
+    display: flex;
+    gap: 40px;
+    @include mobile {
+      display: flex;
+      gap: 15px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+    }
+  }
+
+  &__text1 {
+  }
+
+  &__text2 {
+  }
+}

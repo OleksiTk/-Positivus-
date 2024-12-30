@@ -1,0 +1,22 @@
+@import "variables";
+@import "normalize", "fonts", "mixins", "media", "utils", "globals";
+//
+@import "./blocks/button";
+@import "./blocks/grid";
+@import "./blocks/burget-button";
+@import "./blocks/mobile-overlay.scss";
+@import "./blocks/header";
+@import "./blocks/section";
+@import "./blocks/main";
+@import "./blocks/banner";
+@import "./blocks/puddle-bg";
+@import "./blocks/services";
+@import "./blocks/srevice-card";
+@import "./blocks/studies";
+@import "./blocks/process";
+@import "./blocks/team";
+@import "./blocks/paginations";
+@import "./blocks/reviews";
+@import "./blocks/reviews-card";
+@import "./blocks/contacts";
+@import "./blocks/footer";

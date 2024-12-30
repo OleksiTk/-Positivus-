@@ -1,0 +1,26 @@
+.reviews {
+  &__pagination {
+  }
+
+  &__pagination-list {
+    display: flex;
+  }
+
+  &__pagination-item {
+  }
+
+  &__pagination-button {
+    @include reset-button;
+    @include flex-center;
+    @include square(24px);
+
+    color: var(--color-white);
+  }
+}
+.pagination {
+}
+.is-current {
+  color: var(--color-green);
+}
+.visually-hidden {
+}

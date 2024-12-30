@@ -1,0 +1,91 @@
+.team {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__card {
+    width: 387px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    padding: 30px 35px;
+  }
+
+  &__card-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 317px;
+      height: 2px;
+      background-color: var(--color-black);
+      top: 130%;
+      left: 0;
+    }
+    margin-bottom: 26px;
+  }
+
+  &__card-title-icon {
+    img {
+      width: 100px; /* ширина зображення */
+      height: 100px; /* висота зображення */
+      border-radius: 50%; /* робить зображення круглим */
+      object-fit: cover; /* щоб зображення заповнювало весь круг */
+    }
+
+    padding-right: 20px;
+  }
+
+  &__card-title-info {
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  &__card-title-info-name {
+  }
+
+  &__card-title-info-position {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-size: 17px;
+  }
+
+  &__card-title-linkidin {
+    @include flex-center;
+    @include square(41px);
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+  &__card-title-linkidin-none {
+    visibility: hidden;
+  }
+
+  &__card-subtitle {
+    margin-top: 26px;
+  }
+
+  &__button {
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

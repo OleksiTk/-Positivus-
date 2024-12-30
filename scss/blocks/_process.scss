@@ -1,0 +1,101 @@
+.process {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
+    counter-reset: custom-counter;
+    list-style: none;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    width: 100%; /* ширина буде залежати від батьківського елемента */
+    counter-increment: custom-counter;
+  }
+
+  &__accordion {
+    background-color: var(--color-white);
+    padding: 40px 60px;
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition-duration: var(--transition-duration);
+    @include hover {
+      background-color: var(--color-green);
+    }
+    @include mobile {
+      padding: 30px;
+    }
+    &[open] {
+      --degPlusLine: 0deg;
+      background-color: var(--color-green);
+    }
+  }
+
+  &__accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    column-gap: 30px;
+    user-select: none;
+    @include mobile {
+      column-gap: 20px;
+    }
+  }
+
+  &__accordion-title {
+    @include fluid-text(30, 18);
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    &::before {
+      content: "0" counter(custom-counter);
+      font-size: 2em;
+    }
+    @include mobile {
+      column-gap: 30px;
+    }
+  }
+  --degPlusLine: 90deg;
+  &__accordion-indicator {
+    @include flex-center;
+    @include square(58px);
+    flex-shrink: 0;
+    position: relative;
+    background-color: var(--color-white);
+    border: var(--border);
+    border-radius: 50%;
+    @include mobile {
+      @include square(30px);
+    }
+    &::before {
+      transition-duration: var(--transition-duration);
+      @include abs-center;
+      content: "";
+      background-color: var(--color-black);
+      width: 17px;
+      height: 5px;
+      rotate: var(--degPlusLine);
+      z-index: 3;
+    }
+    &::after {
+      @include abs-center;
+      content: "";
+      background-color: var(--color-black);
+      width: 17px;
+      height: 5px;
+      z-index: 2;
+    }
+  }
+
+  &__accordion-body {
+    margin-top: 30px;
+    border-top: var(--border);
+    padding-top: 30px;
+  }
+}

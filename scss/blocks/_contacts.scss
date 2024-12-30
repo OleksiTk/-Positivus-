@@ -1,0 +1,121 @@
+.contact {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-bottom: 80px;
+    @include desktop {
+      padding-top: 40px;
+      padding-left: 50px;
+      padding-bottom: 50px;
+    }
+    @include tablet {
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-bottom: 50px;
+    }
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__form {
+  }
+
+  &__form-body {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__form-label {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+  }
+
+  &__form-radio {
+  }
+
+  &__form-radio-text {
+    font-size: 20px;
+    padding-left: 14px;
+    &:not(:last-child) {
+      padding-right: 35px;
+    }
+  }
+
+  &__form-inputs {
+    display: flex;
+
+    flex-direction: column;
+    input {
+      margin-bottom: 25px;
+      min-width: 500px;
+      padding: 18px 30px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      @include mobile {
+        min-width: 290px;
+      }
+    }
+    textarea {
+      padding: 18px 30px;
+      border: var(--border);
+      border-radius: var(--border-radius);
+      min-height: 154px;
+    }
+  }
+
+  &__form-inputs-text {
+    padding-bottom: 5px;
+  }
+
+  &__form-inputs-name {
+  }
+
+  &__form-inputs-email {
+  }
+
+  &__form-inputs-message {
+  }
+
+  &__form-button {
+    margin-top: 40px;
+
+    width: 100%;
+  }
+
+  &__img {
+    @include desktop {
+      display: none;
+    }
+    position: relative;
+  }
+  &__img-star1 {
+    position: absolute;
+    top: 32%;
+    left: -330px;
+    z-index: 2;
+  }
+  &__img-star2 {
+    z-index: 2;
+    color: var(--color-green);
+    position: absolute;
+    top: 70%;
+    left: -400px;
+  }
+  &__img-mask {
+    position: absolute;
+    z-index: 2;
+    left: -370px;
+    clip-path: inset(0 50% 0 0); /* обрізаємо ліву половину */
+  }
+}
+.button {
+}
